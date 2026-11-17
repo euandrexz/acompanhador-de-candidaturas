@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Acompanhador de Candidaturas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Acompanhador de Candidaturas</h1>
+    <p>Organize suas vagas e acompanhe seus processos seletivos.</p>
+  </header>
+
+  <main>
+    <section class="cartao">
+      <h2>Nova candidatura</h2>
+
+     <form id="form-candidatura">
+        <div class="campo">
+          <label for="empresa">Empresa</label>
+          <input id="empresa" name="empresa" type="text" required>
+        </div>
+
+        <div class="campo">
+          <label for="cargo">Cargo</label>
+          <input id="cargo" name="cargo" type="text" required>
+        </div>
+
+        <div class="campo">
+          <label for="link">Link da vaga</label>
+          <input id="link" name="link" type="url" placeholder="https://exemplo.com/vaga">
+        </div>
+
+        <div class="campo">
+          <label for="data">Data da candidatura</label>
+          <input id="data" name="data" type="date" required>
+        </div>
+
+        <div class="campo">
+          <label for="status">Status</label>
+          <select id="status" name="status">
+            <option value="quero-me-candidatar">Quero me candidatar</option>
+            <option value="inscrito">Inscrito</option>
+            <option value="entrevista">Entrevista</option>
+            <option value="aprovado">Aprovado</option>
+            <option value="recusado">Recusado</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="observacoes">Observações</label>
+          <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+        </div>
+
+        <button type="submit">Adicionar candidatura</button>
+      </form>
+    </section>
+
+    <section class="cartao">
+      <h2>Minhas candidaturas</h2>
+      <div id="lista-candidaturas">
+  <p id="mensagem-vazia">Suas candidaturas aparecerão aqui.</p>
+</div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
